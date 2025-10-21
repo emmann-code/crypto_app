@@ -9,6 +9,7 @@ final appNavigationNotifier =
       AppNavigationState
     >((ref) => AppNavigationNotifier(AppNavigationState()));
 
+/// A notifier that manages the state of a AppNavigation according to the event that is dispatched to it.
 class AppNavigationNotifier extends StateNotifier<AppNavigationState> {
-  AppNavigationNotifier(AppNavigationState state) : super(state);
+  AppNavigationNotifier(super.state);
 }

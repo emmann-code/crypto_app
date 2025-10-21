@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
-import 'package:roquu_app/core/utils/image_constant.dart';
-import 'package:roquu_app/theme/text_style_helper.dart';
-import 'package:roquu_app/theme/theme_helper.dart';
 import '../../../widgets/custom_icon_button.dart';
 import '../../../widgets/custom_image_view.dart';
 import '../models/dashboard_card_item_model.dart';
@@ -11,7 +8,7 @@ class DashboardCardItem extends StatelessWidget {
   final DashboardCardItemModel? model;
   final VoidCallback? onTap;
 
-  DashboardCardItem({Key? key, this.model, this.onTap}) : super(key: key);
+  const DashboardCardItem({super.key, this.model, this.onTap});
 
   @override
   Widget build(BuildContext context) {

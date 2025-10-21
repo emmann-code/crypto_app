@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:roquu_app/core/app_exports.dart';
-import 'package:roquu_app/core/utils/image_constant.dart';
 import 'package:roquu_app/presentation/copy_trading_dashboard/models/copy_trading_dashboard_models.dart';
 
 import '../models/dashboard_card_item_model.dart';
@@ -22,7 +21,7 @@ final copyTradingDashboardNotifier =
 
 class CopyTradingDashboardNotifier
     extends StateNotifier<CopyTradingDashboardState> {
-  CopyTradingDashboardNotifier(CopyTradingDashboardState state) : super(state) {
+  CopyTradingDashboardNotifier(super.state) {
     initialize();
   }
 

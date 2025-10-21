@@ -1,23 +1,16 @@
-# Crypto App
+# roquu_app
 
-A Flutter application for cryptocurrency tracking and management.
-
-## App Preview
-
-![Crypto App Preview](assets/images/Crypto.jpeg)
-
-## Features
-- View cryptocurrency prices
-- Track portfolio performance
-- Real-time market data
+A new Flutter project.
 
 ## Getting Started
 
-1. Clone the repository
-2. Run `flutter pub get` to install dependencies
-3. Run `flutter run` to start the app
+This project is a starting point for a Flutter application.
 
-## Requirements
-- Flutter SDK
-- Android Studio / Xcode (for mobile development)
-- VS Code (optional, for development)
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

@@ -1,7 +1,8 @@
 import 'package:roquu_app/core/app_exports.dart';
-import 'package:roquu_app/core/utils/image_constant.dart';
 
 import '../widgets/dashboard_card_item.dart';
+
+/// This class is used in the [DashboardCardItem] widget.
 
 // ignore_for_file: must_be_immutable
 class DashboardCardItemModel extends Equatable {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
-import 'package:roquu_app/theme/theme_helper.dart';
 
 import '../../../widgets/custom_copy_button.dart';
 import '../../../widgets/custom_image_view.dart';
@@ -10,7 +9,7 @@ class TraderCardItem extends StatelessWidget {
   final TraderItemModel? model;
   final VoidCallback? onCopyTap;
 
-  TraderCardItem({Key? key, this.model, this.onCopyTap}) : super(key: key);
+  const TraderCardItem({super.key, this.model, this.onCopyTap});
 
   @override
   Widget build(BuildContext context) {

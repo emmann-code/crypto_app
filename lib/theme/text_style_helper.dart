@@ -12,6 +12,9 @@ class TextStyleHelper {
     return _instance!;
   }
 
+  // Title Styles
+  // Medium text styles for titles and subtitles
+
   TextStyle get title20RegularRoboto => TextStyle(
     fontSize: 20.fSize,
     fontWeight: FontWeight.w400,
@@ -31,7 +34,8 @@ class TextStyleHelper {
     fontFamily: 'Inter',
   );
 
-
+  // Body Styles
+  // Standard text styles for body content
 
   TextStyle get body14BoldEncodeSans => TextStyle(
     fontSize: 14.fSize,
@@ -68,6 +72,8 @@ class TextStyleHelper {
     color: appTheme.blue_gray_200,
   );
 
+  // Other Styles
+  // Miscellaneous text styles without specified font size
 
   TextStyle get bodyTextInter => TextStyle(fontFamily: 'Inter');
 }

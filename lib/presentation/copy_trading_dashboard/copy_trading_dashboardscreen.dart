@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
-import 'package:roquu_app/core/utils/navigator_service.dart';
-import 'package:roquu_app/theme/theme_helper.dart';
 import '../../widgets/custom_app_bar.dart';
 import './widgets/dashboard_card_item.dart';
 import './widgets/trader_card_item.dart';
 import 'notifier/copy_trading_dashboard_notifier.dart';
 
 class CopyTradingDashboardScreen extends ConsumerStatefulWidget {
-  CopyTradingDashboardScreen({Key? key}) : super(key: key);
+  const CopyTradingDashboardScreen({super.key});
 
   @override
   CopyTradingDashboardScreenState createState() =>
@@ -45,6 +43,7 @@ class CopyTradingDashboardScreenState
     );
   }
 
+  /// Section Widget
   Widget _buildDashboardCards(BuildContext context) {
     return Consumer(
       builder: (context, ref, _) {
@@ -75,6 +74,7 @@ class CopyTradingDashboardScreenState
     );
   }
 
+  /// Section Widget
   Widget _buildProTradersSection(BuildContext context) {
     return Expanded(
       child: Column(
@@ -91,6 +91,7 @@ class CopyTradingDashboardScreenState
     );
   }
 
+  /// Section Widget
   Widget _buildTradersList(BuildContext context) {
     return Expanded(
       child: Consumer(
@@ -122,15 +123,18 @@ class CopyTradingDashboardScreenState
     );
   }
 
+  /// Navigates back to the previous screen
   void onTapBackButton(BuildContext context) {
     NavigatorService.goBack();
   }
 
+  /// Handles dashboard card tap
   void onTapDashboardCard(BuildContext context, String cardType) {
     // Handle dashboard card navigation
     print("Dashboard card tapped: $cardType");
   }
 
+  /// Handles copy button tap
   void onTapCopyButton(BuildContext context, String traderName) {
     // Handle copy trader action
     print("Copy button tapped for trader: $traderName");

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, unnecessary_this, use_key_in_widget_constructors, sized_box_for_whitespace
+
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
@@ -5,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:roquu_app/core/utils/image_constant.dart';
 import 'package:roquu_app/theme/theme_helper.dart';
+
+// import '../core/app_export.dart';
 
 extension ImageTypeExtension on String {
   ImageType get imageType {
@@ -44,6 +48,7 @@ class CustomImageView extends StatelessWidget {
     }
   }
 
+  ///[imagePath] is required parameter for showing image
   late String? imagePath;
 
   final double? height;
@@ -80,6 +85,7 @@ class CustomImageView extends StatelessWidget {
     );
   }
 
+  ///build the image with border radius
   _buildCircleImage() {
     if (radius != null) {
       return ClipRRect(
@@ -91,6 +97,7 @@ class CustomImageView extends StatelessWidget {
     }
   }
 
+  ///build the image with border and border radius style
   _buildImageWithBorder() {
     if (border != null) {
       return Container(

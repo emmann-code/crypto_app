@@ -1,9 +1,11 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
 import 'package:roquu_app/routes/app_routes.dart';
 
 class AppNavigationScreen extends ConsumerStatefulWidget {
-  const AppNavigationScreen({Key? key}) : super(key: key);
+  const AppNavigationScreen({super.key});
 
   @override
   AppNavigationScreenState createState() => AppNavigationScreenState();
@@ -42,6 +44,7 @@ class AppNavigationScreenState extends ConsumerState<AppNavigationScreen> {
     );
   }
 
+  /// Common widget
   Widget _buildScreenTitle(
     BuildContext context, {
     required String screenTitle,
@@ -78,10 +81,12 @@ class AppNavigationScreenState extends ConsumerState<AppNavigationScreen> {
     );
   }
 
+  /// Common click event
   void onTapScreenTitle(BuildContext context, String routeName) {
     NavigatorService.pushNamed(routeName);
   }
 
+  /// Common click event for bottomsheet
   void onTapBottomSheetTitle(BuildContext context, Widget className) {
     showModalBottomSheet(
       context: context,
@@ -93,6 +98,7 @@ class AppNavigationScreenState extends ConsumerState<AppNavigationScreen> {
     );
   }
 
+  /// Common click event for dialog
   void onTapDialogTitle(BuildContext context, Widget className) {
     showDialog(
       context: context,

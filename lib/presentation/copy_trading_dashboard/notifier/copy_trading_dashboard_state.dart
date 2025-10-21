@@ -5,7 +5,7 @@ class CopyTradingDashboardState extends Equatable {
   final bool? isLoading;
   final bool? isSuccess;
 
-  CopyTradingDashboardState({
+  const CopyTradingDashboardState({
     this.copyTradingDashboardModel,
     this.isLoading = false,
     this.isSuccess = false,

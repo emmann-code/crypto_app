@@ -3,23 +3,29 @@ import 'package:flutter/material.dart';
 LightCodeColors get appTheme => ThemeHelper().themeColor();
 ThemeData get theme => ThemeHelper().themeData();
 
+/// Helper class for managing themes and colors.
 
 // ignore_for_file: must_be_immutable
 class ThemeHelper {
-  var _appTheme = "lightCode";
+  // The current app theme
+  final _appTheme = "lightCode";
 
-  Map<String, LightCodeColors> _supportedCustomColor = {
+  // A map of custom color themes supported by the app
+  final Map<String, LightCodeColors> _supportedCustomColor = {
     'lightCode': LightCodeColors()
   };
 
-  Map<String, ColorScheme> _supportedColorScheme = {
+  // A map of color schemes supported by the app
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'lightCode': ColorSchemes.lightCodeColorScheme
   };
 
+  /// Returns the lightCode colors for the current theme.
   LightCodeColors _getThemeColors() {
     return _supportedCustomColor[_appTheme] ?? LightCodeColors();
   }
 
+  /// Returns the current theme data.
   ThemeData _getThemeData() {
     var colorScheme =
         _supportedColorScheme[_appTheme] ?? ColorSchemes.lightCodeColorScheme;
@@ -29,8 +35,10 @@ class ThemeHelper {
     );
   }
 
+  /// Returns the lightCode colors for the current theme.
   LightCodeColors themeColor() => _getThemeColors();
 
+  /// Returns the current theme data.
   ThemeData themeData() => _getThemeData();
 }
 
