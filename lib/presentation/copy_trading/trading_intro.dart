@@ -28,7 +28,7 @@ class CopyTradingIntroScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Progress line (blue segment then gray - showing step 1 of 2)
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -78,7 +78,7 @@ class CopyTradingIntroScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Illustration
+            
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -91,7 +91,7 @@ class CopyTradingIntroScreen extends StatelessWidget {
                         'assets/images/copy_trading_illustration.png',
                         fit: BoxFit.contain,
                         errorBuilder: (context, error, stack) {
-                          // Fallback placeholder if asset is missing
+                          
                           return Container(
                             color: const Color(0xFF0F1419),
                             alignment: Alignment.center,
@@ -184,3 +184,4 @@ class CopyTradingIntroScreen extends StatelessWidget {
     );
   }
 }
+

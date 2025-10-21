@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'risk_level_selection_screen.dart';
-
 class CopyTradingDashboardScreen extends StatelessWidget {
   const CopyTradingDashboardScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +26,7 @@ class CopyTradingDashboardScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Progress line (both segments blue - showing step 2 of 2)
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -78,7 +76,7 @@ class CopyTradingDashboardScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Illustration
+            
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -91,7 +89,7 @@ class CopyTradingDashboardScreen extends StatelessWidget {
                         'assets/images/dlwm.png',
                         fit: BoxFit.contain,
                         errorBuilder: (context, error, stack) {
-                          // Fallback placeholder if asset is missing
+                          
                           return Container(
                             color: const Color(0xFF0F1419),
                             alignment: Alignment.center,
@@ -143,12 +141,10 @@ class CopyTradingDashboardScreen extends StatelessWidget {
                                 const begin = Offset(0.0, 1.0);
                                 const end = Offset.zero;
                                 const curve = Curves.easeInOutCubic;
-
                                 var tween = Tween(
                                   begin: begin,
                                   end: end,
                                 ).chain(CurveTween(curve: curve));
-
                                 return SlideTransition(
                                   position: animation.drive(tween),
                                   child: FadeTransition(

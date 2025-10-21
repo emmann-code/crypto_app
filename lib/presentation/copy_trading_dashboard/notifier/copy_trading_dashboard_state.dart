@@ -1,23 +1,19 @@
 part of 'copy_trading_dashboard_notifier.dart';
-
 class CopyTradingDashboardState extends Equatable {
   final CopyTradingDashboardModel? copyTradingDashboardModel;
   final bool? isLoading;
   final bool? isSuccess;
-
   const CopyTradingDashboardState({
     this.copyTradingDashboardModel,
     this.isLoading = false,
     this.isSuccess = false,
   });
-
   @override
   List<Object?> get props => [
     copyTradingDashboardModel,
     isLoading,
     isSuccess,
   ];
-
   CopyTradingDashboardState copyWith({
     CopyTradingDashboardModel? copyTradingDashboardModel,
     bool? isLoading,

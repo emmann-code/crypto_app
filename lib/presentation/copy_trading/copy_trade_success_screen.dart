@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-
 class CopyTradeSuccessScreen extends StatelessWidget {
   final double amount;
   final String currency;
   final String traderName;
-
   const CopyTradeSuccessScreen({
     super.key,
     required this.amount,
     required this.currency,
     required this.traderName,
   });
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

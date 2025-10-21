@@ -1,26 +1,21 @@
 import 'package:flutter/material.dart';
 import 'copy_trade_confirm_screen.dart';
-
 class CopyTradeAmountScreen extends StatefulWidget {
   const CopyTradeAmountScreen({super.key});
-
   @override
   State<CopyTradeAmountScreen> createState() => _CopyTradeAmountScreenState();
 }
-
 class _CopyTradeAmountScreenState extends State<CopyTradeAmountScreen> {
   final TextEditingController _amountController = TextEditingController(
     text: '100',
   );
   final double _balance = 240.73;
   final String _currency = 'USD';
-
   @override
   Widget build(BuildContext context) {
     final double amount = double.tryParse(_amountController.text) ?? 0;
-    final double fee = amount * 0.01; // 1%
+    final double fee = amount * 0.01; 
     final double youGet = (amount - fee).clamp(0, double.infinity);
-
     return Scaffold(
       backgroundColor: const Color(0xFF1A1A1D),
       appBar: AppBar(
@@ -147,13 +142,11 @@ class _CopyTradeAmountScreenState extends State<CopyTradeAmountScreen> {
       bottomNavigationBar: _buildNumPad(context),
     );
   }
-
   Widget _buildNumPad(BuildContext context) {
     void add(String d) {
       final text = _amountController.text;
       setState(() => _amountController.text = (text == '0' ? d : text + d));
     }
-
     void back() {
       final text = _amountController.text;
       if (text.isNotEmpty)
@@ -161,7 +154,6 @@ class _CopyTradeAmountScreenState extends State<CopyTradeAmountScreen> {
           () => _amountController.text = text.substring(0, text.length - 1),
         );
     }
-
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
@@ -204,12 +196,10 @@ class _CopyTradeAmountScreenState extends State<CopyTradeAmountScreen> {
     );
   }
 }
-
 class _NumKey extends StatelessWidget {
   final String label;
   final VoidCallback onTap;
   const _NumKey({required this.label, required this.onTap});
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

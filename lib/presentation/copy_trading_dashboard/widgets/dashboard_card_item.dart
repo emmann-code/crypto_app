@@ -3,13 +3,10 @@ import 'package:roquu_app/core/app_exports.dart';
 import '../../../widgets/custom_icon_button.dart';
 import '../../../widgets/custom_image_view.dart';
 import '../models/dashboard_card_item_model.dart';
-
 class DashboardCardItem extends StatelessWidget {
   final DashboardCardItemModel? model;
   final VoidCallback? onTap;
-
   const DashboardCardItem({super.key, this.model, this.onTap});
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

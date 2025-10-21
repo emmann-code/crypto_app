@@ -1,10 +1,6 @@
 import 'package:roquu_app/core/app_exports.dart';
-
 import '../widgets/dashboard_card_item.dart';
 
-/// This class is used in the [DashboardCardItem] widget.
-
-// ignore_for_file: must_be_immutable
 class DashboardCardItemModel extends Equatable {
   DashboardCardItemModel({
     this.icon,
@@ -19,12 +15,10 @@ class DashboardCardItemModel extends Equatable {
         backgroundGradient ??
         "linear-gradient(134deg,#abe2f3 0%,#bde4e5 50%, #ebe9d0 100%)";
   }
-
   String? icon;
   String? title;
   String? subtitle;
   String? backgroundGradient;
-
   DashboardCardItemModel copyWith({
     String? icon,
     String? title,
@@ -38,7 +32,6 @@ class DashboardCardItemModel extends Equatable {
       backgroundGradient: backgroundGradient ?? this.backgroundGradient,
     );
   }
-
   @override
   List<Object?> get props => [icon, title, subtitle, backgroundGradient];
 }

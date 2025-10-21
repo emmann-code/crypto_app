@@ -13,10 +13,10 @@ class _CopyTradingScreenState extends State<CopyTradingScreen> {
   bool _showMenu = false;
 
   void _handleMenuTap(String menuItem) {
-    // Close the menu first
+    
     setState(() => _showMenu = false);
 
-    // Handle the menu item tap
+    
     print('Tapped on: $menuItem');
 
     if (menuItem == 'Copy trading') {
@@ -35,9 +35,9 @@ class _CopyTradingScreenState extends State<CopyTradingScreen> {
         children: [
           Column(
             children: [
-              // Header with light gradient background
+              
               _Header(),
-              // Main content area with dark background and rounded corners
+              
               Expanded(
                 child: Container(
                   decoration: const BoxDecoration(
@@ -52,7 +52,7 @@ class _CopyTradingScreenState extends State<CopyTradingScreen> {
               ),
             ],
           ),
-          // Menu overlay
+          
           if (_showMenu)
             _MenuOverlay(
               onClose: () => setState(() => _showMenu = false),
@@ -84,10 +84,10 @@ class _Header extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Row(
             children: [
-              // Crypto dropdown pill
+              
               _CryptoPill(),
               const Spacer(),
-              // Right side icons
+              
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
@@ -130,7 +130,7 @@ class _Header extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 8),
-              // UK flag dropdown
+              
               _FlagPill(),
             ],
           ),
@@ -208,7 +208,7 @@ class _MainContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 20),
-            // GBP Balance section
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -229,7 +229,7 @@ class _MainContent extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            // Balance display
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -412,7 +412,7 @@ class _MenuOverlay extends StatelessWidget {
         color: Colors.black.withOpacity(0.5),
         child: Center(
           child: GestureDetector(
-            onTap: () {}, // Prevent closing when tapping the menu itself
+            onTap: () {}, 
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
               decoration: BoxDecoration(
@@ -423,7 +423,7 @@ class _MenuOverlay extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Trade Section
+                    
                     _MenuSection(
                       title: 'Trade',
                       items: [
@@ -466,7 +466,7 @@ class _MenuOverlay extends StatelessWidget {
                       ],
                     ),
                     const Divider(color: Color(0xFF2A2A2A), height: 1),
-                    // Earn Section
+                    
                     _MenuSection(
                       title: 'Earn',
                       items: [
@@ -502,7 +502,7 @@ class _MenuOverlay extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Add bottom padding to prevent text cutoff
+                    
                     const SizedBox(height: 60),
                   ],
                 ),
@@ -549,7 +549,7 @@ class _MenuItem extends StatelessWidget {
   final String title;
   final bool hasNewTag;
   final VoidCallback? onPressed;
-  // Kept for hot-reload compatibility; mapped to onPressed if provided
+  
   final VoidCallback? onTap;
 
   const _MenuItem({
@@ -647,7 +647,7 @@ class _StayUpdatedSectionState extends State<_StayUpdatedSection> {
           curve: Curves.easeInOut,
         );
 
-        // If we've scrolled past the original cards, jump back to the beginning
+        
         if (_currentPage >= _stayUpdatedCards.length) {
           Future.delayed(Duration(milliseconds: 600), () {
             if (_pageController.hasClients) {
@@ -682,7 +682,7 @@ class _StayUpdatedSectionState extends State<_StayUpdatedSection> {
             },
             itemCount:
                 _stayUpdatedCards.length *
-                2, // Double the items for seamless loop
+                2, 
             itemBuilder: (context, index) {
               final cardIndex = index % _stayUpdatedCards.length;
               final card = _stayUpdatedCards[cardIndex];
@@ -700,7 +700,7 @@ class _StayUpdatedSectionState extends State<_StayUpdatedSection> {
           ),
         ),
         const SizedBox(height: 12),
-        // Pagination indicators
+        
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(_stayUpdatedCards.length, (index) {
@@ -1069,7 +1069,7 @@ class _TopGainersSection extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    // Mini chart representation
+                    
                     Expanded(
                       child: SizedBox(
                         height: 16,
@@ -1194,7 +1194,7 @@ class _TopLosersSection extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    // Mini chart representation
+                    
                     Expanded(
                       child: SizedBox(
                         height: 16,
@@ -1468,7 +1468,7 @@ class _NewCoinsSection extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    // Mini chart representation
+                    
                     Expanded(
                       child: SizedBox(
                         height: 16,
@@ -1500,20 +1500,20 @@ class _MiniChartPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Create pixelated, jagged line chart like the image
+    
     final paint = Paint()
       ..color = color
       ..strokeWidth = 2.0
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.square;
 
-    // Generate pixelated data points with jagged movements
+    
     final points = List.generate(12, (i) {
       final x = (i / 11) * size.width;
       double y;
 
       if (isUpward) {
-        // Upward jagged trend
+        
         switch (i) {
           case 0:
             y = size.height * 0.8;
@@ -1555,7 +1555,7 @@ class _MiniChartPainter extends CustomPainter {
             y = size.height * 0.5;
         }
       } else {
-        // Downward jagged trend
+        
         switch (i) {
           case 0:
             y = size.height * 0.2;
@@ -1601,12 +1601,12 @@ class _MiniChartPainter extends CustomPainter {
       return Offset(x, y);
     });
 
-    // Draw pixelated line segments (horizontal and vertical only)
+    
     for (int i = 0; i < points.length - 1; i++) {
       final current = points[i];
       final next = points[i + 1];
 
-      // Draw horizontal line first, then vertical (creating pixelated look)
+      
       canvas.drawLine(current, Offset(next.dx, current.dy), paint);
       canvas.drawLine(Offset(next.dx, current.dy), next, paint);
     }
@@ -1616,7 +1616,7 @@ class _MiniChartPainter extends CustomPainter {
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
-// Data classes and lists
+
 class _TopGainerData {
   final String symbol;
   final double price;
@@ -1788,3 +1788,4 @@ class _NavItem extends StatelessWidget {
     );
   }
 }
+

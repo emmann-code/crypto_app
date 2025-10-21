@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
 
-/// CustomCopyButton - A reusable button component with customizable styling
-///
-/// This component provides a flexible button implementation that can be used
-/// across different screens with customizable text, colors, and dimensions.
-///
-/// @param text - The text to display on the button
-/// @param onPressed - Callback function when button is pressed
-/// @param backgroundColor - Background color of the button
-/// @param textColor - Color of the button text
-/// @param borderColor - Color of the button border
-/// @param borderRadius - Border radius of the button
-/// @param fontSize - Font size of the button text
-/// @param fontWeight - Font weight of the button text
-/// @param horizontalPadding - Horizontal padding inside the button
-/// @param verticalPadding - Vertical padding inside the button
-/// @param width - Width of the button (auto if null)
-/// @param height - Height of the button (auto if null)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CustomCopyButton extends StatelessWidget {
   const CustomCopyButton({
     super.key,
@@ -34,7 +33,6 @@ class CustomCopyButton extends StatelessWidget {
     this.width,
     this.height,
   });
-
   final String? text;
   final VoidCallback? onPressed;
   final Color? backgroundColor;
@@ -47,7 +45,6 @@ class CustomCopyButton extends StatelessWidget {
   final double? verticalPadding;
   final double? width;
   final double? height;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

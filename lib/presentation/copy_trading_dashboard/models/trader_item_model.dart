@@ -1,10 +1,6 @@
 import 'package:roquu_app/core/app_exports.dart';
-
 import '../widgets/trader_card_item.dart';
 
-/// This class is used in the [TraderCardItem] widget.
-
-// ignore_for_file: must_be_immutable
 class TraderItemModel extends Equatable {
   TraderItemModel({
     this.initials,
@@ -27,7 +23,6 @@ class TraderItemModel extends Equatable {
     chartImage = chartImage ?? ImageConstant.imgChart;
     profileImage = profileImage ?? ImageConstant.imgGroup;
   }
-
   String? initials;
   String? name;
   String? followers;
@@ -37,7 +32,6 @@ class TraderItemModel extends Equatable {
   String? aum;
   String? chartImage;
   String? profileImage;
-
   TraderItemModel copyWith({
     String? initials,
     String? name,
@@ -61,7 +55,6 @@ class TraderItemModel extends Equatable {
       profileImage: profileImage ?? this.profileImage,
     );
   }
-
   @override
   List<Object?> get props => [
     initials,

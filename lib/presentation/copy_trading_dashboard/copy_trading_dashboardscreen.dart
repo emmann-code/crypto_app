@@ -4,15 +4,12 @@ import '../../widgets/custom_app_bar.dart';
 import './widgets/dashboard_card_item.dart';
 import './widgets/trader_card_item.dart';
 import 'notifier/copy_trading_dashboard_notifier.dart';
-
 class CopyTradingDashboardScreen extends ConsumerStatefulWidget {
   const CopyTradingDashboardScreen({super.key});
-
   @override
   CopyTradingDashboardScreenState createState() =>
       CopyTradingDashboardScreenState();
 }
-
 class CopyTradingDashboardScreenState
     extends ConsumerState<CopyTradingDashboardScreen> {
   @override
@@ -42,13 +39,11 @@ class CopyTradingDashboardScreenState
       ),
     );
   }
-
-  /// Section Widget
+  
   Widget _buildDashboardCards(BuildContext context) {
     return Consumer(
       builder: (context, ref, _) {
         final state = ref.watch(copyTradingDashboardNotifier);
-
         return Row(
           spacing: 16.h,
           children: [
@@ -73,8 +68,7 @@ class CopyTradingDashboardScreenState
       },
     );
   }
-
-  /// Section Widget
+  
   Widget _buildProTradersSection(BuildContext context) {
     return Expanded(
       child: Column(
@@ -90,14 +84,12 @@ class CopyTradingDashboardScreenState
       ),
     );
   }
-
-  /// Section Widget
+  
   Widget _buildTradersList(BuildContext context) {
     return Expanded(
       child: Consumer(
         builder: (context, ref, _) {
           final state = ref.watch(copyTradingDashboardNotifier);
-
           return ListView.separated(
             padding: EdgeInsets.zero,
             physics: BouncingScrollPhysics(),
@@ -122,21 +114,18 @@ class CopyTradingDashboardScreenState
       ),
     );
   }
-
-  /// Navigates back to the previous screen
+  
   void onTapBackButton(BuildContext context) {
     NavigatorService.goBack();
   }
-
-  /// Handles dashboard card tap
+  
   void onTapDashboardCard(BuildContext context, String cardType) {
-    // Handle dashboard card navigation
+    
     print("Dashboard card tapped: $cardType");
   }
-
-  /// Handles copy button tap
+  
   void onTapCopyButton(BuildContext context, String traderName) {
-    // Handle copy trader action
+    
     print("Copy button tapped for trader: $traderName");
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

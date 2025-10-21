@@ -1,12 +1,9 @@
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:roquu_app/core/app_exports.dart';
 import 'package:roquu_app/presentation/copy_trading_dashboard/models/copy_trading_dashboard_models.dart';
-
 import '../models/dashboard_card_item_model.dart';
 import '../models/trader_item_model.dart';
-
 part 'copy_trading_dashboard_state.dart';
-
 final copyTradingDashboardNotifier =
     StateNotifierProvider.autoDispose<
       CopyTradingDashboardNotifier,
@@ -18,13 +15,11 @@ final copyTradingDashboardNotifier =
         ),
       ),
     );
-
 class CopyTradingDashboardNotifier
     extends StateNotifier<CopyTradingDashboardState> {
   CopyTradingDashboardNotifier(super.state) {
     initialize();
   }
-
   void initialize() {
     state = state.copyWith(
       copyTradingDashboardModel: CopyTradingDashboardModel(
@@ -83,11 +78,9 @@ class CopyTradingDashboardNotifier
       isLoading: false,
     );
   }
-
   void onCopyTrader(String traderId) {
     state = state.copyWith(isLoading: true);
-
-    // Simulate copy action
+    
     Future.delayed(Duration(seconds: 1), () {
       state = state.copyWith(isLoading: false, isSuccess: true);
     });

@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 import 'copy_trade_success_screen.dart';
-
 class CopyTradePinScreen extends StatefulWidget {
   final double amount;
   final String currency;
   final String traderName;
-
   const CopyTradePinScreen({
     super.key,
     required this.amount,
     required this.currency,
     required this.traderName,
   });
-
   @override
   State<CopyTradePinScreen> createState() => _CopyTradePinScreenState();
 }
-
 class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
   String _pin = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,7 +80,7 @@ class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      // Biometric authentication placeholder
+                      
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text(
@@ -132,13 +127,12 @@ class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
       ),
     );
   }
-
   Widget _buildNumPad() {
     void addDigit(String digit) {
       if (_pin.length < 6) {
         setState(() => _pin += digit);
         if (_pin.length == 6) {
-          // Simulate PIN verification
+          
           Future.delayed(const Duration(milliseconds: 500), () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -153,13 +147,11 @@ class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
         }
       }
     }
-
     void deleteDigit() {
       if (_pin.isNotEmpty) {
         setState(() => _pin = _pin.substring(0, _pin.length - 1));
       }
     }
-
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: GridView.builder(
@@ -174,7 +166,7 @@ class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
         itemCount: 12,
         itemBuilder: (context, index) {
           if (index == 9) {
-            return const SizedBox(); // Empty space for dot
+            return const SizedBox(); 
           } else if (index == 10) {
             return _NumKey(label: '0', onTap: () => addDigit('0'));
           } else if (index == 11) {
@@ -192,14 +184,11 @@ class _CopyTradePinScreenState extends State<CopyTradePinScreen> {
     );
   }
 }
-
 class _NumKey extends StatelessWidget {
   final String label;
   final IconData? icon;
   final VoidCallback onTap;
-
   const _NumKey({required this.label, this.icon, required this.onTap});
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

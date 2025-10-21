@@ -405,10 +405,10 @@ class _TradingDetailsScreenState extends State<TradingDetailsScreen>
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Trader Profile Section
+            
             _TraderProfileSection(),
             const SizedBox(height: 24),
-            // Navigation Tabs
+            
             TabBar(
               controller: _tabController,
               indicatorColor: const Color(0xFF3DA9FF),
@@ -422,7 +422,7 @@ class _TradingDetailsScreenState extends State<TradingDetailsScreen>
               ],
             ),
             const SizedBox(height: 24),
-            // Tab Content
+            
             SizedBox(
               height: 400,
               child: TabBarView(
@@ -436,7 +436,7 @@ class _TradingDetailsScreenState extends State<TradingDetailsScreen>
               ),
             ),
             const SizedBox(height: 20),
-            // Copy Trade Button
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SizedBox(
@@ -656,7 +656,7 @@ class _TraderProfileSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          // Avatar and Name
+          
           Row(
             children: [
               Stack(
@@ -727,7 +727,7 @@ class _TraderProfileSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          // Key Metrics
+          
           Row(
             children: [
               Expanded(
@@ -742,7 +742,7 @@ class _TraderProfileSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          // Badges Row
+          
           Wrap(
             spacing: 8,
             runSpacing: 8,
@@ -818,7 +818,7 @@ class _ChartTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ROI Chart
+          
           _ChartSection(
             title: 'ROI',
             timeRange: '7 days',
@@ -826,7 +826,7 @@ class _ChartTab extends StatelessWidget {
             chartType: 'line',
           ),
           const SizedBox(height: 12),
-          // Total PNL Chart
+          
           _ChartSection(
             title: 'Total PNL',
             timeRange: '7 days',
@@ -834,10 +834,10 @@ class _ChartTab extends StatelessWidget {
             chartType: 'line',
           ),
           const SizedBox(height: 12),
-          // Assets Allocation
+          
           _AssetsAllocationSection(),
           const SizedBox(height: 12),
-          // Holding Period
+          
           _HoldingPeriodSection(),
         ],
       ),
@@ -1111,10 +1111,10 @@ class _LineChartPainter extends CustomPainter {
       ..color = const Color(0xFF4CAF50).withOpacity(0.2)
       ..style = PaintingStyle.fill;
 
-    // Draw Y-axis labels
+    
     final textPainter = TextPainter(textDirection: TextDirection.ltr);
 
-    // Y-axis values
+    
     final yValues = ['123%', '123%', '123%', '123%', '123%'];
     final yPositions = [0.1, 0.3, 0.5, 0.7, 0.9];
 
@@ -1130,7 +1130,7 @@ class _LineChartPainter extends CustomPainter {
       );
     }
 
-    // Draw X-axis labels
+    
     final xValues = ['03-23', '03-24', '03-25', '03-26', '03-27', '03-28'];
     final xPositions = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0];
 
@@ -1149,7 +1149,7 @@ class _LineChartPainter extends CustomPainter {
       );
     }
 
-    // Create upward trending line with proper margins
+    
     final marginLeft = 60.0;
     final marginRight = 20.0;
     final marginTop = 20.0;
@@ -1196,7 +1196,7 @@ class _DonutChartPainter extends CustomPainter {
     final center = Offset(size.width / 2, size.height / 2);
     final radius = size.width / 2 - 10;
 
-    // Draw orange segment (100% BTCUSDT)
+    
     final paint = Paint()
       ..color = const Color(0xFFFF9800)
       ..style = PaintingStyle.fill;
@@ -1209,14 +1209,14 @@ class _DonutChartPainter extends CustomPainter {
       paint,
     );
 
-    // Draw inner circle for donut effect
+    
     final innerPaint = Paint()
       ..color = const Color(0xFF2A2A2A)
       ..style = PaintingStyle.fill;
 
     canvas.drawCircle(center, radius * 0.6, innerPaint);
 
-    // Draw text
+    
     final textPainter = TextPainter(
       text: const TextSpan(
         text: 'BTCUSDT\n100.00%',
@@ -1256,7 +1256,7 @@ class _ScatterPlotPainter extends CustomPainter {
 
     final textPainter = TextPainter(textDirection: TextDirection.ltr);
 
-    // Draw Y-axis labels
+    
     final yValues = ['64k', '64k', '64k', '64k', '64k'];
     final yPositions = [0.1, 0.3, 0.5, 0.7, 0.9];
 
@@ -1272,7 +1272,7 @@ class _ScatterPlotPainter extends CustomPainter {
       );
     }
 
-    // Draw X-axis labels
+    
     final xValues = ['1m', '24h', '5d', '15d'];
     final xPositions = [0.2, 0.4, 0.6, 0.8];
 
@@ -1291,7 +1291,7 @@ class _ScatterPlotPainter extends CustomPainter {
       );
     }
 
-    // Draw scatter points with proper margins
+    
     final marginLeft = 60.0;
     final marginRight = 20.0;
     final marginTop = 20.0;
@@ -1324,3 +1324,4 @@ class _ScatterPlotPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
+

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'copy_trade_pin_screen.dart';
-
 class CopyTradeConfirmScreen extends StatelessWidget {
   final double amount;
   final String currency;
   final double youGet;
   final double fee;
   final String traderName;
-
   const CopyTradeConfirmScreen({
     super.key,
     required this.amount,
@@ -16,7 +14,6 @@ class CopyTradeConfirmScreen extends StatelessWidget {
     required this.fee,
     required this.traderName,
   });
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,7 +121,6 @@ class CopyTradeConfirmScreen extends StatelessWidget {
       ),
     );
   }
-
   Widget _kv(String k, String v) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),

@@ -32,7 +32,7 @@ class ProTradersScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 24),
-              // Action Cards
+              
               Row(
                 children: [
                   Expanded(
@@ -65,7 +65,7 @@ class ProTradersScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 32),
-              // PRO Traders Section
+              
               const Text(
                 'PRO Traders',
                 style: TextStyle(
@@ -75,7 +75,7 @@ class ProTradersScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              // Trader List
+              
               ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -204,7 +204,7 @@ class _TraderCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // Top Row: Avatar, Name, Followers, Copy Button
+          
           Row(
             children: [
               Stack(
@@ -310,10 +310,10 @@ class _TraderCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          // Divider
+          
           Container(height: 1, color: Colors.white.withOpacity(0.06)),
           const SizedBox(height: 16),
-          // Performance Metrics
+          
           Row(
             children: [
               Expanded(
@@ -377,7 +377,7 @@ class _TraderCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              // Mini Chart
+              
               SizedBox(
                 width: 64,
                 height: 28,
@@ -435,10 +435,10 @@ class _TraderCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          // Bottom divider
+          
           Container(height: 1, color: Colors.white.withOpacity(0.06)),
           const SizedBox(height: 12),
-          // Footer row: Win rate and AUM summary already shown right
+          
           Row(
             children: [
               RichText(
@@ -461,3 +461,4 @@ class _TraderCard extends StatelessWidget {
     );
   }
 }
+

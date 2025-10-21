@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:roquu_app/core/app_exports.dart';
-
 import '../../../widgets/custom_copy_button.dart';
 import '../../../widgets/custom_image_view.dart';
 import '../models/trader_item_model.dart';
-
 class TraderCardItem extends StatelessWidget {
   final TraderItemModel? model;
   final VoidCallback? onCopyTap;
-
   const TraderCardItem({super.key, this.model, this.onCopyTap});
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -154,7 +150,6 @@ class TraderCardItem extends StatelessWidget {
       ],
     );
   }
-
   Widget _buildProfileSection(BuildContext context) {
     return Stack(
       children: [
@@ -184,7 +179,6 @@ class TraderCardItem extends StatelessWidget {
       ],
     );
   }
-
   Widget _buildTraderInfo(BuildContext context) {
     return Expanded(
       child: Column(
