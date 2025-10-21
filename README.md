@@ -46,7 +46,7 @@ A modern Flutter application for cryptocurrency trading with copy trading featur
 
 ## Screenshots
 
-*Add screenshots of your app here*
+![Crypto App Screenshot](assets/images/Crypto.jpeg)
 
 ## Contributing
 

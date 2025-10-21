@@ -6,17 +6,19 @@ import 'package:roquu_app/core/utils/image_constant.dart';
 import 'package:roquu_app/theme/theme_helper.dart';
 extension ImageTypeExtension on String {
   ImageType get imageType {
-    if (this.startsWith('http') || this.startsWith('https')) {
-      if (this.endsWith('.svg')) {
+    if (startsWith('http') || startsWith('https')) {
+      if (endsWith('.svg')) {
         return ImageType.networkSvg;
       }
       return ImageType.network;
-    } else if (this.endsWith('.svg')) {
+    } else if (endsWith('.svg')) {
       return ImageType.svg;
-    } else if (this.startsWith('file:
+    } else if (startsWith('file:')) {
       return ImageType.file;
-    } else {
+    } else if (isNotEmpty) {
       return ImageType.png;
+    } else {
+      return ImageType.unknown;
     }
   }
 }
